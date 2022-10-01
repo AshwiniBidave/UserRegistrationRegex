@@ -3,21 +3,21 @@ package Com.regex;
 import java.util.regex.*;
 
 public class UserRegistration {
-	public static void checkValidPassword(String password) {
+    public static void checkValidEmail(String email) {
 
-        boolean isPassword;
-        String passwordRegex = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$";
-        Pattern patternObject = Pattern.compile(passwordRegex);
-        if (password == null) {
-            isPassword = false;
+        boolean isEmail;
+        String emailRegex = "^[a-zA-Z]+[a-zA-Z0-9]*[- . + _]?[a-zA-Z0-9]+[@]{1}[a-z0-9]+[.]{1}[a-z]+[.]?[a-z]+$";
+        Pattern patternObject = Pattern.compile(emailRegex);
+        if (email == null) {
+            isEmail = false;
         }
-        Matcher matcherObject = patternObject.matcher(password);
-        isPassword = matcherObject.matches();
+        Matcher matcherObject = patternObject.matcher(email);
+        isEmail = matcherObject.matches();
 
-        if (isPassword)
-            System.out.println(password + " is a Valid  Password\n");
+        if (isEmail)
+            System.out.println(email + " is a Valid Email address\n");
         else
-            System.out.println(password + " is an Invalid Password");
+            System.out.println(email + " is an Invalid Email address\n");
     }
 
 }
