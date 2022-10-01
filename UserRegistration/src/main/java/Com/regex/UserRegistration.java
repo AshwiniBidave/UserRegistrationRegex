@@ -35,5 +35,23 @@ public class UserRegistration {
         else
             System.out.println(lastName + " is an Invalid Last Name");
     }
+    public static void checkValidEmail(String email) {
+
+        boolean isEmail;
+        String emailRegex = ("[a-z0-9@.]*");
+        Pattern patternObject = Pattern.compile(emailRegex);
+        if (email == null) {
+            isEmail = false;
+        }
+        Matcher matcherObject = patternObject.matcher(email);
+        isEmail = matcherObject.matches();
+
+        if (isEmail)
+            System.out.println(email + " is a Valid Email address\n");
+        else
+            System.out.println(email + " is an Invalid Email address\n");
+    }
+
+
 
 }

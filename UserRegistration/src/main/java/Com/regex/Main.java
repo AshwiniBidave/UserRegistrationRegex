@@ -18,6 +18,10 @@ public class Main
         System.out.println("Enter Your Last Name");
         String lastName = scannerObject.nextLine();
         UserRegistration.checkValidLastName(lastName);
+        System.out.println("Enter Your Email Address");
+        String email = scannerObject.nextLine();
+        UserRegistration.checkValidEmail(email);
+
 
 
 
