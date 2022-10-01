@@ -12,16 +12,9 @@ public class Main
     {
         System.out.println( "******Welcome To Regex***********" );
         Scanner scannerObject = new Scanner(System.in);
-        System.out.println("Enter Your First Name");
-        String firstName = scannerObject.nextLine();
-        UserRegistration.checkValidFirstName(firstName);
-        System.out.println("Enter Your Last Name");
-        String lastName = scannerObject.nextLine();
-        UserRegistration.checkValidLastName(lastName);
-        System.out.println("Enter Your Email Address");
-        String email = scannerObject.nextLine();
-        UserRegistration.checkValidEmail(email);
-
+        System.out.println("Enter Your Mobile Number");
+        String mobileNumber = scannerObject.nextLine();
+        UserRegistration.checkValidMobileNumber(mobileNumber);
 
 
 

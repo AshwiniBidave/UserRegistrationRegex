@@ -3,55 +3,21 @@ package Com.regex;
 import java.util.regex.*;
 
 public class UserRegistration {
-    public static void checkValidFirstName(String firstName) {
+	public static void checkValidMobileNumber(String mobileNumber) {
 
-        boolean isFirstName;
-        String firstNameRegex = "^[A-Z]{1}[a-z]{2,}$";
-        Pattern patternObject = Pattern.compile(firstNameRegex);
-        if (firstName == null) {
-            isFirstName = false;
+        boolean isMobileNumber;
+        String mobileRegex = "^(91){1}[ ]+[0-9]{10}$";
+        Pattern patternObject = Pattern.compile(mobileRegex);
+        if (mobileNumber == null) {
+            isMobileNumber = false;
         }
-        Matcher matcherObject = patternObject.matcher(firstName);
-        isFirstName = matcherObject.matches();
+        Matcher matcherObject = patternObject.matcher(mobileNumber);
+        isMobileNumber = matcherObject.matches();
 
-        if (isFirstName)
-            System.out.println(firstName + " is an Valid First Name\n");
+        if (isMobileNumber)
+            System.out.println(mobileNumber + " is a Valid  Mobile Number\n");
         else
-            System.out.println(firstName + " is an Invalid First Name");
+            System.out.println(mobileNumber + " is an Invalid Mobile Number");
     }
-    public static void checkValidLastName(String lastName) {
-
-        boolean isLastName;
-        String lastNameRegex = "^[A-Z]{1}[a-z]{2,}$";
-        Pattern patternObject = Pattern.compile(lastNameRegex);
-        if (lastName == null) {
-            isLastName = false;
-        }
-        Matcher matcherObject = patternObject.matcher(lastName);
-        isLastName = matcherObject.matches();
-
-        if (isLastName)
-            System.out.println(lastName + " is an Valid Last Name\n");
-        else
-            System.out.println(lastName + " is an Invalid Last Name");
-    }
-    public static void checkValidEmail(String email) {
-
-        boolean isEmail;
-        String emailRegex = ("[a-z0-9@.]*");
-        Pattern patternObject = Pattern.compile(emailRegex);
-        if (email == null) {
-            isEmail = false;
-        }
-        Matcher matcherObject = patternObject.matcher(email);
-        isEmail = matcherObject.matches();
-
-        if (isEmail)
-            System.out.println(email + " is a Valid Email address\n");
-        else
-            System.out.println(email + " is an Invalid Email address\n");
-    }
-
-
 
 }
