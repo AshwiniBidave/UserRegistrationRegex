@@ -3,21 +3,21 @@ package Com.regex;
 import java.util.regex.*;
 
 public class UserRegistration {
-	public static void checkValidMobileNumber(String mobileNumber) {
+	public static void checkValidPassword(String password) {
 
-        boolean isMobileNumber;
-        String mobileRegex = "^(91){1}[ ]+[0-9]{10}$";
-        Pattern patternObject = Pattern.compile(mobileRegex);
-        if (mobileNumber == null) {
-            isMobileNumber = false;
+        boolean isPassword;
+        String passwordRegex = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$%^&-+=()])([a-zA-Z0-9]*).{8,}$";
+        Pattern patternObject = Pattern.compile(passwordRegex);
+        if (password == null) {
+            isPassword = false;
         }
-        Matcher matcherObject = patternObject.matcher(mobileNumber);
-        isMobileNumber = matcherObject.matches();
+        Matcher matcherObject = patternObject.matcher(password);
+        isPassword = matcherObject.matches();
 
-        if (isMobileNumber)
-            System.out.println(mobileNumber + " is a Valid  Mobile Number\n");
+        if (isPassword)
+            System.out.println(password + " is a Valid  Password\n");
         else
-            System.out.println(mobileNumber + " is an Invalid Mobile Number");
+            System.out.println(password + " is an Invalid Password");
     }
 
 }
